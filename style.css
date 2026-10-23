@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #f1f5f9;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #263247;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span,
+.hero h1 span {
+    color: #38bdf8;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 12%;
+}
+
+.badge,
+.numero {
+    color: #38bdf8;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    max-width: 800px;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.15;
+    margin: 22px 0;
+}
+
+.description {
+    max-width: 600px;
+    color: #aebbd0;
+    margin-bottom: 30px;
+}
+
+.bouton {
+    display: inline-block;
+    background: #38bdf8;
+    color: #07111f;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.bouton:hover {
+    background: #7dd3fc;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 75px 12%;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section > p {
+    color: #aebbd0;
+    max-width: 700px;
+}
+
+.cartes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.carte {
+    background: #111c30;
+    border: 1px solid #263247;
+    border-radius: 14px;
+    padding: 26px;
+    transition: 0.2s;
+}
+
+.carte:hover {
+    border-color: #38bdf8;
+    transform: translateY(-4px);
+}
+
+.carte h3 {
+    margin: 12px 0;
+}
+
+.carte p:last-child {
+    color: #aebbd0;
+}
+
+.contact {
+    background: #101a2b;
+}
+
+.contact .bouton {
+    margin-top: 20px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #94a3b8;
+    border-top: 1px solid #263247;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 65px 7%;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .cartes {
+        grid-template-columns: 1fr;
+    }
+}
